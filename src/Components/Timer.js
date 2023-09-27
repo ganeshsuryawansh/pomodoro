@@ -41,19 +41,24 @@ const Timer = () => {
   }, [isActive, time, isBreak]);
 
   return (
-    <div>
-      <h1 className="text-2xl">
+    <div className="flex flex-col items-center justify-center h-screen">
+      <h1 className="text-2xl text-center">
         {isBreak ? "Break Time" : "Timer"} - {Math.floor(time / 60)}:
         {time % 60 < 10 ? "0" : ""}
         {time % 60}
       </h1>
-      <button onClick={toggleTimer} className="bg-blue-500 text-white p-2 rounded">
-        {isActive ? "Pause" : "Start"}
-      </button>
-      <button onClick={resetTimer} className="bg-red-500 text-white p-2 rounded ml-4">
-        Reset
-      </button>
+      <div className="flex items-center">
+        <button onClick={toggleTimer} className="bg-blue-500 text-white p-2 rounded">
+          {isActive ? "Pause" : "Start"}
+        </button>
+        <button onClick={resetTimer} className="bg-red-500 text-white p-2 rounded ml-4">
+          Reset
+        </button>
+      </div>
     </div>
+
+
+
   );
 };
 

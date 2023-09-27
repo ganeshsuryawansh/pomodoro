@@ -44,13 +44,14 @@ const Login = ({ onLoginSuccess }) => {
   };
 
   return (
-    <div>
+    <div className="bg-slate-800 h-96 w-96">
+
       <input
         type="email"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="Email"
-        className="border p-2 rounded"
+        className="border p-2 rounded my-3"
       />
       <br />
       <input
@@ -58,16 +59,16 @@ const Login = ({ onLoginSuccess }) => {
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         placeholder="Password"
-        className="border p-2 rounded"
+        className="border p-2 rounded my-3"
       />
       <br />
       <button onClick={handleLogin} className="bg-blue-500 text-white p-2 rounded">
         Login
-      </button>
+      </button><br/>
       <button onClick={handleRegister} className="bg-green-500 text-white p-2 rounded">
         Register
-      </button>
-      <button onClick={handleGoogleLogin} className="bg-red-500 text-white p-2 rounded ml-4">
+      </button><br/>
+      <button onClick={handleGoogleLogin} className="bg-red-500 text-white p-2 rounded">
         Login with Google
       </button>
     </div>
